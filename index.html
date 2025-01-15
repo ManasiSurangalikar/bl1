@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bucket List</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(173,216,230);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 1.5em 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        ul.bucket-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul.bucket-list li {
+            background: #fff;
+            margin: 0.5rem 0;
+            padding: 1rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        ul.bucket-list li .icon {
+            font-size: 2rem;
+            margin-right: 1rem;
+            color: #28a745;
+        }
+
+        ul.bucket-list li.completed .icon {
+            color: #ffc107;
+        }
+
+        ul.bucket-list li .text {
+            flex-grow: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                font-size: 90%;
+                padding: 0 1rem;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            ul.bucket-list li {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            ul.bucket-list li .icon {
+                margin-right: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            ul.bucket-list li {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            ul.bucket-list li .icon {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #f1f1f1;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Bucket List</h1>
+    </header>
+
+    <div class="container">
+        <ul class="bucket-list">
+            <li class="completed">
+                <span class="icon">&#9733;</span>
+                <span class="text">Visit the Eiffel Tower</span>
+            </li>
+            <li>
+                <span class="icon">&#10003;</span>
+                <span class="text">Visit Manali</span>
+            </li>
+            <li>
+                <span class="icon">&#10003;</span>
+                <span class="text">Develop a website</span>
+            </li>
+            <li class="completed">
+                <span class="icon">&#9733;</span>
+                <span class="text">Watch a Wimbledon match live</span>
+            </li>
+            <li>
+                <span class="icon">&#10003;</span>
+                <span class="text">Learn to play the guitar</span>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 My Bucket List</p>
+    </footer>
+</body>
+</html>
